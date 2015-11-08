@@ -1,6 +1,6 @@
-(ns radar.core-test
+(ns radar.config-test
   (:require [clojure.test :refer :all]
-            [radar.core :refer :all]))
+            [radar.config :refer :all]))
 
 (def sample-configuration
   [{"name" "Robots"
