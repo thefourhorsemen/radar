@@ -6,5 +6,9 @@
 (defn read-configuration [filename]
   (json/parse-string (slurp filename)))
 
-(defn targets [configuration]
+(defn categories [configuration]
   (map #(% "name") configuration))
+
+(defn targets [configuration]
+  (map #(% "categories") configuration))
+

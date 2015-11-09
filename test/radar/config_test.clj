@@ -4,34 +4,53 @@
 
 (def sample-configuration
   [{"name" "Robots"
-    "categories" {"adopt" "Ar Drone"
-                  "trial" "Phamtom X Hexapod"
-                  "assess" "Myo Armband"
-                  "hold" "Roomba"}
+    "categories" ["Ar Drone"
+                  "Phamtom X Hexapod"
+                  "Myo Armband"
+                  "Roomba"]
     }
    {"name" "Languages"
-    "categories" {"adopt" "Clojure"
-                  "trial" "Idris"
-                  "assess" "Pixie"
-                  "hold" "JavaScript"}
+    "categories" ["Clojure"
+                  "Idris"
+                  "Pixie"
+                  "JavaScript"]
     }
    {"name" "Cute Animals"
-    "categories" {"adopt" "Llamas"
-                  "trial" "Alpagas"
-                  "assess" "Wombats"
-                  "hold" "Hedgehogs"}
+    "categories" ["Llamas"
+                  "Alpagas"
+                  "Wombats"
+                  "Hedgehogs"]
     }
    {"name" "Tasty Food"
-    "categories" {"adopt" "Crumpets"
-                  "trial" "Mint Tim Tams"
-                  "assess" "Raclette"
-                  "hold" "Egg Nog"}
+    "categories" ["Crumpets"
+                  "Mint Tim Tams"
+                  "Raclette"
+                  "Egg Nog"]
     }])
 
 (deftest test-read-configuration
   (let [expected sample-configuration]
     (is (= expected (read-configuration "sample.json")))))
 
-(deftest test-targets
+(deftest test-categories
   (let [expected ["Robots" "Languages" "Cute Animals" "Tasty Food"]]
+    (is (= expected (categories sample-configuration)))))
+
+(deftest test-targets
+  (let [expected [["Ar Drone"
+                   "Phamtom X Hexapod"
+                   "Myo Armband"
+                   "Roomba"]
+                  ["Clojure"
+                   "Idris"
+                   "Pixie"
+                   "JavaScript"]
+                  ["Llamas"
+                   "Alpagas"
+                   "Wombats"
+                   "Hedgehogs"]
+                  ["Crumpets"
+                   "Mint Tim Tams"
+                   "Raclette"
+                   "Egg Nog"]]]
     (is (= expected (targets sample-configuration)))))
