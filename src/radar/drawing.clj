@@ -21,7 +21,7 @@
     (q/line xcenter 0 xcenter (q/height))
     (q/line 0 ycenter (q/width) ycenter)))
 
-(defn draw-target [color text x y]
+(defn draw-category [color text [x y]]
   (let [horizontal-margin 10
         vertical-size 50
         text-width (q/text-width text)
@@ -33,23 +33,22 @@
     (q/fill white)
     (q/text text (+ horizontal-margin rx) (+ (- vertical-size 20) ry))))
 
-(defn draw-targets [targets]
+(defn draw-categories [categories]
   (q/text-size 20)
   (let [red (q/color 255 0 0)
         green (q/color 0 255 0)
         blue (q/color 0 0 255)
-        purple (q/color 50 0 50)]
-    (draw-target blue (nth targets 0) 0 0)
-    (draw-target red (nth targets 1) (q/width) 0)
-    (draw-target green (nth targets 2) (q/width) (q/height))
-    (draw-target purple (nth targets 3) 0 (q/height))))
+        purple (q/color 50 0 50)
+        colors [blue red green purple]
+        positions [[0 0] [(q/width) 0] [(q/width) (q/height)] [0 (q/height)]]]
+    (doall (map draw-category colors categories positions))))
 
-(defn draw [targets configuration]
+(defn draw [categories configuration]
   (q/background white)
   (draw-circle configuration)
   (draw-axis)
-  (draw-targets targets))
+  (draw-categories categories))
 
-(defn draw-radar [targets configuration]
+(defn draw-radar [categories configuration]
   ; run sketch
-  (q/defsketch radar :size [900 900] :draw (partial draw targets configuration)))
+  (q/defsketch radar :size [900 900] :draw (partial draw categories configuration)))
