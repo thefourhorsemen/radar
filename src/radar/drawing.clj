@@ -28,6 +28,13 @@
     (q/line xcenter 0 xcenter (q/height))
     (q/line 0 ycenter (q/width) ycenter)))
 
+(defn draw-levels [levels]
+  (let [[xcenter ycenter] (center)]
+    (q/fill black)
+    (q/text-align :center :center)
+    (doall (map q/text levels (repeat xcenter)
+             (iterate (fn [y] (- y (/ radius 1.85))) (- ycenter 30))))))
+
 (defn draw-category [color text [x y]]
   (let [horizontal-margin 10
         vertical-size 50
@@ -47,24 +54,26 @@
         positions [[0 0] [(q/width) 0] [(q/width) (q/height)] [0 (q/height)]]]
     (doall (map draw-category colors categories positions))))
 
-(defn draw-target [color text [x y]]
+(defn draw-target [color text [x y] [opx opy]]
   (let [[xcenter ycenter] (center)]
     (q/fill color)
     (q/text-align :center :center)
     (doall (map q/text text
-             (iterate (fn [x] (+ x (/ radius 2))) (+ xcenter x))
-             (iterate (fn [x] (- x (/ radius 2))) (- ycenter y))))))
+             (iterate (fn [x] (opx x (/ radius 3))) (+ xcenter x))
+             (iterate (fn [y] (opy y (/ radius 3))) (- ycenter y))))))
 
 (defn draw-targets [targets]
   (let [nradius (/ radius 3.5)
         colors [(blue) (red) (green) (purple)]
-        positions [[(- 0 nradius) nradius] [nradius nradius] [nradius (- 0 nradius)] [(- 0 nradius) (- 0 nradius)]]]
-    (doall (map draw-target colors targets positions))))
+        positions [[(- 0 nradius) nradius] [nradius nradius] [nradius (- 0 nradius)] [(- 0 nradius) (- 0 nradius)]]
+        operators [[- -] [+ -] [+ +] [- +]]]
+    (doall (map draw-target colors targets positions operators))))
 
 (defn draw [categories targets configuration]
   (q/background white)
   (draw-circle configuration)
   (draw-axis)
+  (draw-levels ["Adopt" "Trial" "Assess" "Hold"])
   (draw-categories categories)
   (draw-targets targets))
 
