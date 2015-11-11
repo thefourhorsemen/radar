@@ -6,4 +6,4 @@
 (defn -main [& args]
   (let [filename (first args)
         configuration (read-configuration filename)]
-    (draw-radar (categories configuration) (targets configuration) configuration)))
+    (draw-radar (categories configuration) (targets configuration))))
