@@ -10,7 +10,6 @@
 
 (def white 255)
 (def black 0)
-
 (defn- red [] (q/color 200 0 0))
 (defn- green [] (q/color 0 100 0))
 (defn- blue [] (q/color 0 0 200))
