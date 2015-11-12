@@ -22,49 +22,51 @@ Hereafter is the gigasquid radar 2014 drawn with radar.
 <img src="sample.png" alt="Radar" align="center" size="0.5"/>
 
 Here the content of the configuration leading to the sample radar above:
-    [
-        {
-            "name": "Robots",
-            "categories": [
-                "Ar Drone",
-                "Phamtom X Hexapod",
-                "Myo Armband",
-                "Roomba"
-            ]
-        },
-        {
-            "name": "Languages",
-            "categories": [
-                "Clojure",
-                "Pixie",
-                "Idris",
-                "JavaScript"
-           ]
-        },
-        {
-            "name": "Cute Animals",
-                "categories": [
-                "Llamas",
-                "Alpagas",
-                "Wombats",
-                "Hedgehogs"
-            ]
-        },
-        {
-            "name": "Tasty Food",
-            "categories": [
-                "Crumpets",
-                "Mint Tim Tams",
-                "Raclette",
-                "Egg Nog"
-            ]
-        }
+```json
+[
+  {
+    "name": "Robots",
+    "categories": [
+      "Ar Drone",
+      "Phamtom X Hexapod",
+      "Myo Armband",
+      "Roomba"
     ]
-
+  },
+  {
+    "name": "Languages",
+    "categories": [
+      "Clojure",
+      "Pixie",
+      "Idris",
+      "JavaScript"
+    ]
+  },
+  {
+    "name": "Cute Animals",
+    "categories": [
+      "Llamas",
+      "Alpagas",
+      "Wombats",
+      "Hedgehogs"
+    ]
+  },
+  {
+    "name": "Tasty Food",
+    "categories": [
+      "Crumpets",
+      "Mint Tim Tams",
+      "Raclette",
+      "Egg Nog"
+    ]
+  }
+]
+```
 ## Depencencies
 Radar uses:
-    * clj-json, a clojure JSON library
-    * quil, a powerfull graphical clojure framework
+
+* clj-json, a clojure JSON library
+* quil, a powerfull graphical clojure framework
 
 ## License
 
