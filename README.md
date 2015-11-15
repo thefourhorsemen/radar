@@ -4,16 +4,12 @@ Simple clojure application to draw a radar (idea from http://gigasquidsoftware.c
 
 ## Installation
 
-Download standalone jar from from http://example.com/FIXME.
+Download standalone jar from available releases (https://github.com/thefourhorsemen/radar/releases).
 
 ## Usage
 
     $ java -jar radar-1.0.0.jar [filename]
 where `filename` is the name of the configuration file, in JSON format.
-
-## Options
-
-N/A
 
 ## Examples
 

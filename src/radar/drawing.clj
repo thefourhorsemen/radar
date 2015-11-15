@@ -58,8 +58,8 @@
 
 (defn- draw-target [color text [lat-direction long-direction] offset step]
   (let [[xcenter ycenter] (center)
-        opx (op-direction lat-direction)
-        opy (op-direction long-direction)]
+        opx (op-direction long-direction)
+        opy (op-direction lat-direction)]
     (q/fill color)
     (q/text-align :center :center)
     (doall (map q/text text
@@ -68,7 +68,7 @@
 
 (defn- draw-targets [targets]
   (let [colors [(blue) (red) (green) (purple)]
-        directions [[:north :west] [:south :west] [:south :east] [:north :east]]]
+        directions [[:north :west] [:north :east] [:south :east] [:south :west]]]
     (doall (map draw-target colors targets directions (repeat (/ radius 3.5)) (repeat (/ radius 3))))))
 
 (defn- draw [categories targets]
