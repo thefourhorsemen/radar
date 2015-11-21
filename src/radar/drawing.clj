@@ -6,10 +6,10 @@
   [(/ (q/width) 2)
    (/ (q/height) 2)])
 
-(def radius 200)
+(def ^:private radius 200)
 
-(def white 255)
-(def black 0)
+(def ^:private white 255)
+(def ^:private black 0)
 (defn- red [] (q/color 200 0 0))
 (defn- green [] (q/color 0 100 0))
 (defn- blue [] (q/color 0 0 200))
