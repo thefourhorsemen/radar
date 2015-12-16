@@ -1,10 +1,10 @@
 # Radar
 
-Simple clojure application to draw a radar (idea from http://gigasquidsoftware.com/blog/2014/12/17/gigasquids-radar-2014).
+Simple clojure application to draw a radar (idea from [gigaquid](http://gigasquidsoftware.com/blog/2014/12/17/gigasquids-radar-2014)).
 
 ## Installation
 
-Download standalone jar from available releases (https://github.com/thefourhorsemen/radar/releases).
+Download standalone jar from available [releases](https://github.com/thefourhorsemen/radar/releases).
 
 ## Usage
 
@@ -61,8 +61,8 @@ Here the content of the configuration leading to the sample radar above:
 ## Depencencies
 Radar uses:
 
-* clj-json, a clojure JSON library
-* quil, a powerfull graphical clojure framework
+* [clj-json](https://github.com/mmcgrana/clj-json), a clojure JSON library,
+* [quil](https://github.com/quil/quil), a powerfull graphical clojure framework.
 
 ## License
 
