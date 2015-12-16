@@ -13,7 +13,7 @@
 (defn- red [] (q/color 200 0 0))
 (defn- green [] (q/color 0 100 0))
 (defn- blue [] (q/color 0 0 200))
-(defn- purple [] (q/color 35 0 35))
+(defn- purple [] (q/color 75 0 75))
 
 (defn- op-direction [direction]
   (if (or (= direction :west) (= direction :north)) - +))
@@ -45,7 +45,7 @@
         ry (if (= y 0) y (- y vertical-size))]
     (q/stroke white)
     (q/fill color)
-    (q/rect rx ry (+ (* 2 horizontal-margin) text-width) vertical-size)
+    (q/rect rx ry (+ (* 2 horizontal-margin) text-width) vertical-size 7)
     (q/fill white)
     (q/text-align :left)
     (q/text text (+ horizontal-margin rx) (+ (- vertical-size 15) ry))))
@@ -79,7 +79,9 @@
     (draw-axis)
     (draw-levels levels)
     (draw-categories categories)
-    (draw-targets targets)))
+    (draw-targets targets)
+    (q/save "radar.png")
+    (q/no-loop)))
 
 (defn draw-radar [categories targets]
   ; run sketch

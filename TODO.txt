@@ -1,6 +1,6 @@
 SImple document ation with input file as a txt
     Languages = Clojure, Pixie, Idris, Javascript
 
-Automatic export as a PDF file.
+Save image as same basename from input.
 
-Rounded rectangles.
+Turn into a clojure library in order to use on a simple web page deploy on Heroku.

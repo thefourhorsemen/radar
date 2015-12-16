@@ -1,0 +1,4 @@
+Robots: Ar Drone, Phamtom X Hexapod, Myo Armband, Roomba
+Languages: Clojure, Pixie, Idris, JavaScript
+Cute Animals: Llamas, Alpagas, Wombats, Hedgehogs
+Tasty Food: Crumpets, Mint Tim Tams, Raclette, Egg Nog

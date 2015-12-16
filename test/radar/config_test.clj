@@ -11,8 +11,8 @@
     }
    {"name" "Languages"
     "categories" ["Clojure"
-                  "Idris"
                   "Pixie"
+                  "Idris"
                   "JavaScript"]
     }
    {"name" "Cute Animals"
@@ -42,8 +42,8 @@
                    "Myo Armband"
                    "Roomba"]
                   ["Clojure"
-                   "Idris"
                    "Pixie"
+                   "Idris"
                    "JavaScript"]
                   ["Llamas"
                    "Alpagas"
