@@ -11,6 +11,8 @@ Download standalone jar from available [releases](https://github.com/thefourhors
     $ java -jar radar-1.0.0.jar [filename]
 where `filename` is the name of the configuration file, in JSON format.
 
+Note that an image, named `radar.png`, is created in the current directory.
+
 ## Examples
 
 Hereafter is the gigasquid radar 2014 drawn with radar.
