@@ -28,10 +28,17 @@
                   "Egg Nog"]
     }])
 
-(deftest test-read-configuration
+(deftest test-read-json-configuration
   (let [expected sample-configuration]
     (is (= expected (read-configuration "sample.json")))))
 
+(deftest test-read-txt-configuration
+  (let [expected sample-configuration]
+    (is (= expected (read-configuration "sample.txt")))))
+
+(deftest test-read-unknown-configuration
+    (is (thrown-with-msg? IllegalArgumentException #"configuration with extension ukn is not supported" (read-configuration "sample.ukn"))))
+    
 (deftest test-categories
   (let [expected ["Robots" "Languages" "Cute Animals" "Tasty Food"]]
     (is (= expected (categories sample-configuration)))))
