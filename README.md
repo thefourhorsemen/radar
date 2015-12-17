@@ -9,17 +9,17 @@ Download standalone jar from available [releases](https://github.com/thefourhors
 ## Usage
 
     $ java -jar radar-1.0.0.jar [filename]
-where `filename` is the name of the configuration file, in JSON format.
+where `filename` is the name of the configuration file, both JSON and text formats are supported.
 
 Note that an image, named `radar.png`, is created in the current directory.
 
-## Examples
+## Example
 
 Hereafter is the gigasquid radar 2014 drawn with radar.
 
-<img src="sample.png" alt="Radar" align="center" size="0.5"/>
+<img src="sample.png" alt="Radar" align="center" size="0.4"/>
 
-Here the content of the configuration leading to the sample radar above:
+Here the content of the JSON configuration file leading to the sample radar above:
 ```json
 [
   {
@@ -60,6 +60,15 @@ Here the content of the configuration leading to the sample radar above:
   }
 ]
 ```
+
+Here the content of the text configuration leading to the sample radar above:
+```clojure
+Robots: Ar Drone, Phamtom X Hexapod, Myo Armband, Roomba
+Languages: Clojure, Pixie, Idris, JavaScript
+Cute Animals: Llamas, Alpagas, Wombats, Hedgehogs
+Tasty Food: Crumpets, Mint Tim Tams, Raclette, Egg Nog
+```
+
 ## Depencencies
 Radar uses:
 
