@@ -37,8 +37,11 @@
     (is (= expected (read-configuration "sample.txt")))))
 
 (deftest test-read-unknown-configuration
-    (is (thrown-with-msg? IllegalArgumentException #"configuration with extension ukn is not supported" (read-configuration "sample.ukn"))))
-    
+  (is (thrown-with-msg? IllegalArgumentException #"configuration with extension ukn is not supported" (read-configuration "sample.ukn"))))
+
+(deftest test-read-unknown-file
+  (is (thrown? java.io.FileNotFoundException (read-configuration "ukn.json"))))
+
 (deftest test-categories
   (let [expected ["Robots" "Languages" "Cute Animals" "Tasty Food"]]
     (is (= expected (categories sample-configuration)))))

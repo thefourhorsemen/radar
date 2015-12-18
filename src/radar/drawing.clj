@@ -71,7 +71,7 @@
         directions [[:north :west] [:north :east] [:south :east] [:south :west]]]
     (doall (map draw-target colors targets directions (repeat (/ radius 3.5)) (repeat (/ radius 3))))))
 
-(defn- draw [categories targets]
+(defn- draw [categories targets output-file]
   (let [levels ["Adopt" "Trial" "Assess" "Hold"]]
     (q/text-font (q/create-font "Bold Candara" 20))
     (q/background white)
@@ -80,9 +80,9 @@
     (draw-levels levels)
     (draw-categories categories)
     (draw-targets targets)
-    (q/save "radar.png")
+    (q/save output-file)
     (q/no-loop)))
 
-(defn draw-radar [categories targets]
+(defn draw-radar [categories targets output-file]
   ; run sketch
-  (q/defsketch radar :size [900 900] :draw (partial draw categories targets)))
+  (q/defsketch radar :size [900 900] :draw (partial draw categories targets output-file)))

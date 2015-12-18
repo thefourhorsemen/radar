@@ -8,10 +8,10 @@ Download standalone jar from available [releases](https://github.com/thefourhors
 
 ## Usage
 
-    $ java -jar radar-1.0.0.jar [filename]
-where `filename` is the name of the configuration file, both JSON and text formats are supported.
+    $ java -jar radar-1.0.0.jar [filename.ext]
+where `filename.ext` is the name of the configuration file. Both JSON (`.json`) and text (`.txt`) formats are supported.
 
-Note that an image, named `radar.png`, is created in the current directory.
+Note that an image, named `filename.png`, is automatically created in the current directory.
 
 ## Example
 
