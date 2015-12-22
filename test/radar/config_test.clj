@@ -30,17 +30,17 @@
 
 (deftest test-read-json-configuration
   (let [expected sample-configuration]
-    (is (= expected (read-configuration "sample.json")))))
+    (is (= expected (read-configuration "test/radar/sample.json")))))
 
 (deftest test-read-txt-configuration
   (let [expected sample-configuration]
-    (is (= expected (read-configuration "sample.txt")))))
+    (is (= expected (read-configuration "test/radar/sample.txt")))))
 
 (deftest test-read-unknown-configuration
-  (is (thrown-with-msg? IllegalArgumentException #"configuration with extension ukn is not supported" (read-configuration "sample.ukn"))))
+  (is (thrown-with-msg? IllegalArgumentException #"configuration with extension ukn is not supported" (read-configuration "test/radar/sample.ukn"))))
 
 (deftest test-read-unknown-file
-  (is (thrown? java.io.FileNotFoundException (read-configuration "ukn.json"))))
+  (is (thrown? java.io.FileNotFoundException (read-configuration "test/radar/ukn.json"))))
 
 (deftest test-categories
   (let [expected ["Robots" "Languages" "Cute Animals" "Tasty Food"]]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Robots",
+    "categories": [
+      "Ar Drone",
+      "Phamtom X Hexapod",
+      "Myo Armband",
+      "Roomba"
+    ]
+  },
+  {
+    "name": "Languages",
+    "categories": [
+      "Clojure",
+      "Pixie",
+      "Idris",
+      "JavaScript"
+    ]
+  },
+  {
+    "name": "Cute Animals",
+    "categories": [
+      "Llamas",
+      "Alpagas",
+      "Wombats",
+      "Hedgehogs"
+    ]
+  },
+  {
+    "name": "Tasty Food",
+    "categories": [
+      "Crumpets",
+      "Mint Tim Tams",
+      "Raclette",
+      "Egg Nog"
+    ]
+  }
+]

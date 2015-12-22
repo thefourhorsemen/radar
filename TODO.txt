@@ -1,3 +1,2 @@
-1.1.0 delivery.
 Add CI to github.
 Turn into a clojure library in order to use on a simple web page deploy on Heroku.

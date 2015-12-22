@@ -17,7 +17,7 @@ Note that an image, named `filename.png`, is automatically created in the curren
 
 Hereafter is the gigasquid radar 2014 drawn with radar.
 
-<img src="sample.png" alt="Radar" align="center" size="0.4"/>
+<img src="doc/sample.png" alt="Radar" align="center" size="0.4"/>
 
 Here the content of the JSON configuration file leading to the sample radar above:
 ```json

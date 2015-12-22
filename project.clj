@@ -1,4 +1,4 @@
-(defproject radar "1.0.0"
+(defproject radar "1.1.0"
   :description "Radar generator"
   :url "https://github.com/thefourhorsemen/radar"
   :license {:name "Eclipse Public License"
