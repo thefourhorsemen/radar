@@ -37,7 +37,7 @@
     (is (= expected (read-configuration "test/radar/sample.txt")))))
 
 (deftest test-read-unknown-configuration
-  (is (thrown-with-msg? IllegalArgumentException #"configuration with extension ukn is not supported" (read-configuration "test/radar/sample.ukn"))))
+  (is (thrown-with-msg? IllegalArgumentException #"Unable to decode configuration file named test/radar/sample.ukn" (read-configuration "test/radar/sample.ukn"))))
 
 (deftest test-read-unknown-file
   (is (thrown? java.io.FileNotFoundException (read-configuration "test/radar/ukn.json"))))
